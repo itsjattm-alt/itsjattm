@@ -1,0 +1,81 @@
+
+:root{
+  --bg:#0b0f14;
+  --card:#0f1620;
+  --text:#e6f1ff;
+  --muted:#9bb0c3;
+  --brand:#0ea5e9;
+  --brand-2:#22c55e;
+  --ring:rgba(14,165,233,.35);
+}
+*{box-sizing:border-box}
+html,body{margin:0;padding:0}
+body{
+  font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  background: radial-gradient(1200px 600px at 10% -10%, rgba(34,197,94,.15), transparent 40%),
+              radial-gradient(1200px 600px at 110% 10%, rgba(14,165,233,.15), transparent 40%),
+              var(--bg);
+  color:var(--text);
+  line-height:1.6;
+}
+a{color:var(--text);text-decoration:none}
+.container{width:min(1100px, 92%);margin-inline:auto}
+/* Navbar */
+.header{
+  position:sticky;top:0;z-index:50;
+  backdrop-filter:saturate(1.4) blur(8px);
+  background: rgba(11,15,20,.65);
+  border-bottom:1px solid rgba(255,255,255,.06);
+}
+.nav{display:flex;align-items:center;justify-content:space-between;padding:14px 0}
+.brand{display:flex;gap:10px;align-items:center}
+.brand img{width:36px;height:36px;border-radius:9px}
+.brand strong{font-weight:800;letter-spacing:.3px}
+.badge{font-size:12px;color:var(--muted);border:1px solid rgba(255,255,255,.12);padding:2px 8px;border-radius:999px}
+.nav-links{display:flex;gap:16px;align-items:center}
+.nav-links a{padding:8px 12px;border-radius:10px;color:#cfe2ff;border:1px solid transparent}
+.nav-links a.active,.nav-links a:hover{border-color:rgba(255,255,255,.1);background:rgba(255,255,255,.03)}
+.actions{display:flex;gap:10px;align-items:center}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:10px 14px;border-radius:12px;
+  background:linear-gradient(90deg,var(--brand),var(--brand-2));color:#06131b;font-weight:800;border:none}
+.btn.secondary{background:transparent;color:var(--text);border:1px solid rgba(255,255,255,.12)}
+/* Hero */
+.hero{padding:56px 0}
+.grid-2{display:grid;grid-template-columns:1.1fr .9fr;gap:28px}
+@media (max-width:900px){.grid-2{grid-template-columns:1fr}}
+h1{font-size:44px;line-height:1.1;margin:0 0 10px}
+h1 .grad{background:linear-gradient(90deg,#7dd3fc,#86efac);-webkit-background-clip:text;background-clip:text;color:transparent}
+.lead{color:var(--muted);max-width:56ch}
+.card{background:var(--card);border:1px solid rgba(255,255,255,.08);border-radius:16px;padding:16px}
+.card .frame{aspect-ratio:16/9;overflow:hidden;border-radius:12px;border:1px solid rgba(255,255,255,.08)}
+.card iframe{width:100%;height:100%}
+/* Sections */
+.section{padding:32px 0}
+.section-title{display:flex;align-items:end;justify-content:space-between;margin-bottom:12px}
+.kpis{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+@media (max-width:800px){.kpis{grid-template-columns:repeat(2,1fr)}}
+.kpi{background:var(--card);border:1px solid rgba(255,255,255,.08);border-radius:16px;padding:18px}
+.kpi h3{font-size:28px;margin:2px 0}
+.kpi p{margin:0;color:var(--muted)}
+/* Video grid */
+.video-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:16px}
+.video{background:var(--card);border:1px solid rgba(255,255,255,.08);border-radius:16px;padding:12px}
+.video .frame{aspect-ratio:16/9;border-radius:12px;overflow:hidden}
+/* Farm */
+.products{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:16px}
+.product{background:var(--card);border:1px solid rgba(255,255,255,.08);border-radius:16px;padding:16px;display:flex;flex-direction:column;gap:10px}
+.price{color:#cde9d6}
+.order{margin-top:auto}
+.order .btn{width:100%}
+/* Footer */
+.footer{padding:30px 0;margin-top:30px;border-top:1px solid rgba(255,255,255,.08);color:var(--muted)}
+.footer .grid{display:grid;grid-template-columns:1.2fr 1fr 1fr;gap:16px}
+@media (max-width:900px){.footer .grid{grid-template-columns:1fr}}
+.mini{font-size:12px;color:var(--muted)}
+.icon-btn{display:inline-flex;align-items:center;justify-content:center;width:34px;height:34px;border-radius:10px;
+  border:1px solid rgba(255,255,255,.12);color:#d7ecff}
+.icon-row{display:flex;gap:8px;margin-top:8px}
+/* Utilities */
+.muted{color:var(--muted)}
+.pill{border:1px solid rgba(255,255,255,.16);padding:2px 10px;border-radius:999px;font-size:12px;color:#bcd1e5}
+hr{border:0;border-top:1px solid rgba(255,255,255,.08);margin:16px 0}
